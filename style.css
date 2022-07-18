@@ -1,0 +1,409 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-weight: 100;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+  background: linear-gradient(#f1555536, rgba(3, 184, 255, 0.3), white);
+}
+
+/* Skeletons */
+.cityCountryNameSkeleton {
+  margin: 10px;
+  width: 400px;
+  height: 250px;
+  margin-top: 100px;
+}
+
+.temperatureSkeleton {
+  width: 600px;
+  height: 173px;
+}
+
+/* Search Panel */
+#search {
+  display: block;
+  padding: 20px 70px;
+  width: 350px;
+}
+
+#searchImg {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #76ddff00;
+  cursor: pointer;
+}
+
+#locationName:focus ~ #searchImg {
+  background-color: rgba(3, 184, 255, 0.5);
+}
+
+#search #locationName {
+  position: relative;
+  top: -10px;
+  padding: 3px;
+  font-size: 1.3em;
+  font-family: "Ubuntu", sans-serif;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 3px solid rgb(0 121 255 / 50%);
+}
+
+/* weather Panel */
+#weatherPanel {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  max-width: 1536px;
+}
+
+#weatherPanel #cityCountryName {
+  width: 400px;
+  margin: 10px;
+  margin-top: 100px;
+}
+
+#weatherPanel #cityCountryName #locationImg {
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin: 15px auto;
+}
+
+#weatherPanel #cityCountryName #cityName {
+  font-size: 60px;
+  text-align: center;
+}
+
+#weatherPanel #cityCountryName #countryName {
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Temperarure Details */
+#weatherPanel #temperatureDetails {
+  width: 600px;
+  display: block;
+}
+#weatherPanel #temperatureDetails #temperature {
+  font-size: 150px;
+  text-align: center;
+}
+#weatherPanel #temperatureDetails #weatherImg {
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+}
+#weatherPanel #temperatureDetails #weatherImg {
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+}
+#weatherPanel #temperatureDetails #weatherType {
+  text-align: center;
+  font-size: 25px;
+}
+
+/* Minimum Maximum Temperature */
+#minMaxTemperature {
+  max-width: 1536px;
+  display: flex;
+  margin: 50px 0px;
+  flex-wrap: wrap-reverse;
+}
+#minMaxTemperature div {
+  margin: auto;
+}
+#minMaxTemperature div {
+  font-size: 1.3em;
+}
+
+#minMaxTemperature #minTemperature,
+#maxTemperature {
+  /* border: 2px solid black; */
+  font-size: 1.7em;
+  text-align: center;
+}
+
+/* Weather Information Panel */
+#weatherInfo {
+  display: flex;
+  max-width: 1536px;
+  margin: 10px 0px;
+  flex-wrap: wrap;
+}
+#weatherInfo .weatherElement {
+  width: 7rem;
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+#weatherInfo .weatherElement img {
+  height: 40px;
+  width: 40px;
+}
+
+#foreAndLoc {
+  display: flex;
+  max-width: 1536px;
+  flex-wrap: wrap;
+}
+/* Forecast Styling */
+#forecast {
+  display: block;
+  box-shadow: 0px 0px 5px 1px rgba(0 0 0 / 0.3);
+  width: 40rem;
+  height: 40vw;
+  background-color: #cdf0fe;
+  margin: 50px;
+  border-radius: 1.2rem;
+  margin: auto;
+}
+#forecast h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  padding: 10px;
+}
+#forecast #forecastOptions {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#forecast #forecastOptions h4 {
+  cursor: pointer;
+}
+#forecast #forecastOptions h4:hover {
+  color: blue;
+}
+
+#forecast #forecastOptions hr {
+  transform: rotate(90deg);
+  width: 1.3em;
+  background-color: black;
+  border: 0.2px solid black;
+}
+#forecastdata {
+  margin-top: 20px;
+  height: 28vw;
+  overflow-y: scroll;
+}
+.forecastElement {
+  display: flex;
+  width: 80%;
+  box-shadow: 0px 0px 10px 0px rgba(0 0 0 / 0.3);
+  margin: 10px auto;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: black;
+  font-weight: bold;
+  background-color: #ffffff87;
+}
+
+.forecastElement h3 {
+  padding: 0px 20px;
+  font-size: 1.1em;
+  width: 25%;
+}
+
+#forecastdata::-webkit-scrollbar {
+  display: none;
+}
+
+.active {
+  color: blue;
+}
+
+.popularLocation {
+  display: block;
+  box-shadow: 0px 0px 5px 1px rgba(0 0 0 / 0.3);
+  height: 40vw;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 1.2rem;
+  display: block;
+  width: 40rem;
+  flex-wrap: wrap;
+}
+
+.popularLocation h2 {
+  text-align: center;
+  padding: 15px;
+  font-size: 1.7em;
+  color: #008aff;
+}
+
+#locations {
+  display: flex;
+  width: 100%;
+  height: 85%;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+#location::-webkit-scrollbar {
+  display: none;
+  visibility: hidden;
+}
+
+#locations h3 {
+  text-align: center;
+  width: 26%;
+  border: 3px solid #03a9f4;
+  padding: 5px;
+  margin: 5px auto;
+  background: #e1f5fe;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  height: 30px;
+}
+
+/* Media Queries For Responsiveness */
+
+@media only screen and (max-width: 1024px) {
+  #search {
+    margin: auto;
+  }
+
+  #weatherPanel #temperatureDetails {
+    margin: 20px 200px;
+  }
+
+  #weatherPanel #cityCountryName {
+    margin: auto;
+  }
+
+  #minMaxTemperature {
+    margin-top: -50px;
+  }
+
+  #forecast {
+    margin: 30px auto;
+    height: 40vh;
+    width: 70%;
+  }
+
+  #forecastOptions h4 {
+    font-size: 1.5rem;
+  }
+  #forecastdata {
+    height: 30vh;
+  }
+
+  .popularLocation {
+    margin: auto;
+    width: 70%;
+  }
+  #locations h3 {
+    width: 19%;
+  }
+
+  footer {
+    margin-top: 30px;
+  }
+}
+
+
+
+@media only screen and (max-width: 696px) {
+  .temperatureSkeleton {
+    width: 350px;
+    height: 100px;
+  }
+  #weatherPanel #temperatureDetails #temperature {
+    font-size: 100px;
+  }
+  #forecast{
+    height: 600px;
+  }
+  #forecastdata{
+    height: 420px;
+  }
+  .popularLocation{
+    height: 600px;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+  #search #locationName {
+    width: 180px;
+  }
+  #searchImg {
+    height: 20px;
+    width: 20px;
+  }
+  #search {
+    width: 250px;
+    margin: auto;
+  }
+
+  #weatherPanel #temperatureDetails #temperature {
+    font-size: 70px;
+  }
+
+  #weatherPanel #temperatureDetails {
+    width: 350px;
+    margin: auto;
+  }
+
+  .temperatureSkeleton {
+    width: 350px;
+    height: 100px;
+  }
+
+  #minMaxTemperature div {
+    margin: 15px auto;
+  }
+  #forecast {
+    width: 95%;
+    height: 90vh;
+    
+  }
+  .forecastElement {
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .forecastElement h3 {
+    width: 40%;
+    padding: 5px;
+  }
+  #forecastdata {
+    height: 72%;
+  }
+  #weatherInfo .weatherElement {
+    margin: 20px 10px;
+    width: 6rem;
+  }
+
+  .popularLocation {
+    width: 95%;
+    height: 90vh;
+    overflow-x: hidden;
+  }
+
+  #locations h3 {
+    width: 35%;
+  }
+
+  footer {
+    height: 0;
+  }
+}

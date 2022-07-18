@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="shortcut icon"
+      href="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Weather Forecast Application</title>
+  </head>
+  <body>
+
+    <section id="weatherPanel">
+
+      <div id="cityCountryName" class="cityCountryNameSkeleton">
+        <img
+        src="https://pngimg.com/uploads/gps/gps_PNG63.png"
+        height="25px"
+        width="25px"
+        id="locationImg"
+        alt=""
+        />
+        <h2 id="cityName"></h2>
+        <h4 id="countryName"></h4>
+      </div>
+
+
+
+          <div id="temperatureDetails">
+            <h1 id="temperature" class="temperatureSkeleton"></h1>
+            <img id="weatherImg" alt="" />
+            <h3 id="weatherType"></h3>
+          </div>
+          
+          <div id="search">
+            <input type="text" id="locationName" placeholder="Enter Location" />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/93/93642.png"
+              id="searchImg"
+              height="30px"
+              width="30px"
+              alt=""
+            />
+          </div>
+          
+          
+        </section>
+
+      <div id="minMaxTemperature">
+        <div>
+          <h3>Minimum Temperature</h3>
+          <h3 id="minTemperature"></h3>
+        </div>
+        <div>
+          <h3>Maximum Temperature</h3>
+          <h3 id="maxTemperature"></h3>
+        </div>
+      </div>
+
+      <div id="weatherInfo">
+        <div class="weatherElement">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1852/1852525.png"
+            alt=""
+          />
+          <h3>Sunrise</h3>
+          <h3 id="sunriseTime"></h3>
+        </div>
+
+        <div class="weatherElement">
+          <img
+            src="https://img.icons8.com/external-wanicon-flat-wanicon/2x/external-sunset-beach-wanicon-flat-wanicon.png"
+            alt=""
+          />
+          <h3>Sunset</h3>
+          <h3 id="sunsetTime"></h3>
+        </div>
+
+        <div class="weatherElement">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3563/3563395.png"
+            alt=""
+          />
+          <h3>Pressure</h3>
+          <h3 id="pressure"></h3>
+        </div>
+
+        <div class="weatherElement">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5532/5532989.png"
+            alt=""
+          />
+          <h3>Wind Speed</h3>
+          <h3 id="windSpeed"></h3>
+        </div>
+
+        <div class="weatherElement">
+          <img
+            src="https://img.icons8.com/external-justicon-flat-justicon/2x/external-humidity-weather-justicon-flat-justicon-1.png"
+            alt=""
+          />
+          <h3>Humidity</h3>
+          <h3 id="humidity"></h3>
+        </div>
+
+        <div class="weatherElement">
+          <img
+            src="https://icons.iconarchive.com/icons/google/noto-emoji-travel-places/1024/42650-thermometer-icon.png"
+            alt=""
+          />
+          <h3>Real Feel</h3>
+          <h3 id="feelLike"></h3>
+        </div>
+      </div>
+
+      <section id="foreAndLoc">
+        <div id="forecast">
+          <h2>Weather Forecast</h2>
+          <div id="forecastOptions">
+            <h4 id="hourly" class="active">Hourly</h4>
+            <hr />
+            <h4 id="daily">Daily</h4>
+          </div>
+          <div id="forecastdata"></div>
+        </div>
+
+        <div class="popularLocation">
+          <h2>Popular Location</h2>
+          <div id="locations">
+            <!-- Data filled by javascript -->
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <h3>Made by Prathamesh By ❤️ | No Copyright Issues</h3>
+      </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
